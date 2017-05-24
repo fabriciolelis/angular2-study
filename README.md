@@ -1,6 +1,6 @@
-# PrimeiroProjeto
+# Primeiro Projeto
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.4.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) with puporse for my study about Angular 2.
 
 ## Development server
 
