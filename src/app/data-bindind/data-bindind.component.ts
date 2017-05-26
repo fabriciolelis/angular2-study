@@ -10,6 +10,10 @@ export class DataBindindComponent implements OnInit {
   url: string = 'https://sites.google.com/site/fabriciolelis/home';
   cursoAngular: boolean = true;
   urlImagem: string = 'http://lorempixel.com/400/200/sports/';
+  valorAtual: string = '';
+  valorSalvo: string = '';
+
+  isMouseOver: boolean = false;
 
   getCurtirCurso() {
     return true;
@@ -17,6 +21,23 @@ export class DataBindindComponent implements OnInit {
 
   getValor() {
     return 1;
+  }
+
+  botaoClicado(){
+    alert('Botão clicado!');
+  }
+
+  onKeyUp(evento: KeyboardEvent) {
+    this.valorAtual = (<HTMLInputElement>evento.target).value;
+  }
+
+  onMouseOverOut(){
+    this.isMouseOver = !this.isMouseOver;
+
+  }
+
+  salvarValor(valor) {
+    this.valorSalvo = valor;
   }
 
   constructor() { }

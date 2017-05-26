@@ -1,5 +1,30 @@
-<section class="property-binding">
-  <!--<article>
+<section class="event-binding">
+  <article>
+    <h3>Event binding</h3>
+    <div>
+      <button (click)="botaoClicado()" class="btn btn-primary">Me clique!</button>
+      <br><br>
+
+      <!-- declaração de variável local #campoInput -->
+      <input type="text" (keyup)="onKeyUp($event)"
+      (keyup.enter)="salvarValor(campoInput.value)"
+      (blur)="salvarValor($event.target.value)"
+      #campoInput/>
+      <p>Valor atual: {{ valorAtual }}</p>
+      <p>Valor salvo: {{ valorSalvo }}</p>
+      <br>
+      <span (mouseover)="onMouseOverOut()"
+            (mouseout)="onMouseOverOut()"
+      [class.highlight]="isMouseOver">
+        Passe o mouse sobre mim
+      </span>
+    </div>
+  </article>
+</section>
+
+
+<!--<section class="property-binding">
+  &lt;!&ndash;<article>
     <h3>Interpolation / Interpolação</h3>
     <p> String redenrizada com interpolação {{ url }}</p>
     <p> Resultado de 1 + 1 é: {{ 1 + 1 }}</p>
@@ -12,7 +37,7 @@
     <img src="{{ urlImagem }}">
     <img [src]="urlImagem">
     <img bind-src="urlImagem"> //mesma coisa da linha 13
-  </article>-->
+  </article>&ndash;&gt;
 
   <article>
     <h3>Class e Style Bindind</h3>
@@ -44,11 +69,11 @@
       </div>
 
       <div class="alert alert-danger" role="alert" [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
-        Esse texto soemente em caso de erro.
+        Esse texto somente aparece em caso de erro.
       </div>
 
     </div>
   </article>
 
 
-</section>
+</section>-->
