@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { MeuPrimeiroComponent } from './meu-primeiro/meu-primeiro.component';
 import { CursosModule } from './cursos/cursos.module';
 import { DataBindindComponent } from './data-bindind/data-bindind.component';
+import { InputPropertyComponent } from './input-property/input-property.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MeuPrimeiroComponent,
-    DataBindindComponent
+    DataBindindComponent,
+    InputPropertyComponent
   ],
   imports: [
     BrowserModule,
